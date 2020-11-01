@@ -9,3 +9,16 @@
     namespace{
     [EnableCors(origins: "http://mywebclient.azurewebsites.net", headers: "*", methods: "*")]
     }
+    
+    Note: Cors parameter
+    a. origins
+    b. headers
+    c. methods [GET,POST,PUT,DELETE]
+
+4. to disable CORS for specific method/action
+   
+   [DisabeCors]
+   [HttpPost]
+   public HttpResponseMessage GetBranch([FromBody] BranchDataModel[] sysParam) {
+    return message;
+   }
